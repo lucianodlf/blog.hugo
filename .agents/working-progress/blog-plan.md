@@ -1,7 +1,9 @@
 # Plan de Proyecto: Blog con Obsidian + Hugo + GitHub Pages
 
-> Documento de referencia para trabajar con Claude Code CLI.  
+> Documento de referencia para trabajar con Claude Code CLI.
 > Stack elegido: **Hugo + Enveloppe + Obsidian Git + GitHub Actions**
+>
+> Sesión Claude: `claude --resume 1f74fe1b-a5b6-4254-9ff9-5f8e387281af`
 
 ---
 
@@ -79,15 +81,15 @@ GitHub Pages
 - [ ] PENDIENTE: Revisar `logo` en sidebar — `>` aparece concatenado con el título (`> --verbose`); evaluar usar emoji, imagen, o eliminar
 
 ### Etapa 2 — GitHub Actions + GitHub Pages
-- [ ] 1. Crear `.github/workflows/deploy.yml`
-- [ ] 2. Configurar GitHub Pages → Source: "GitHub Actions"
-- [ ] 3. Verificar workflow en verde
-- [ ] 4. Confirmar URL pública
+- [x] 1. Crear `.github/workflows/deploy.yml`
+- [x] 2. Configurar GitHub Pages → Source: "GitHub Actions"
+- [x] 3. Verificar workflow en verde
+- [x] 4. Confirmar URL pública → https://lucianodlf.github.io/blog.hugo/
 
 ### Etapa 3 — Configuración de Enveloppe
-- [ ] 1. Instalar plugin Enveloppe en Obsidian
-- [ ] 2. Generar GitHub Personal Access Token (scope: `repo`)
-- [ ] 3. Configurar Enveloppe (GitHub, upload path `content/posts/`, attachment path `static/images/`, wikilinks)
+- [x] 1. Instalar plugin Enveloppe en Obsidian
+- [x] 2. Generar GitHub Personal Access Token (scope: `repo`)
+- [x] 3. Configurar Enveloppe (GitHub, upload path `content/posts/`, attachment path `static/images/`, wikilinks)
 - [ ] 4. Configurar regla de imágenes
 - [ ] 5. Test end-to-end completo
 
