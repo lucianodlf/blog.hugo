@@ -8,4 +8,4 @@ updated: 06-03-2026T22:00
 created: 06-03-2026T20:52
 ---
 
-![asset-20260306205541352.png](./Proyectos/blog/posts/assets/mi-primer-post/asset-20260306205541352.png.png)
+![asset-20260306205541352.png](../../assets/asset-20260306205541352.png.png)
