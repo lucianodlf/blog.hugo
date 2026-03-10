@@ -37,7 +37,7 @@ jobs:
 
       - name: Fix asset paths from Enveloppe
         run: |
-          find content/posts -name "*.md" | xargs -r sed -i \
+          find content/posts -name "*.md" -print0 | xargs -0 sed -i \
             -e 's|\.\./\.\./static/assets/|../../assets/|g' \
             -e 's|\.\./static/assets/|../assets/|g' \
             -e 's/\.png\.png/.png/g' \

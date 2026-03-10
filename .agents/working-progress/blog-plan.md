@@ -56,12 +56,15 @@ GitHub Pages
 ```
 1. Escribís en Obsidian (wikilinks, imágenes con ![[...]])
 2. Agregás `share: true` al frontmatter de la nota
-3. Desde Obsidian: Enveloppe → "Upload all shared notes"
+3. Ctrl+Shift+P → Enveloppe "Upload all shared notes"
    - Convierte wikilinks a markdown estándar
-   - Sube imágenes al path correcto del repo
+   - Sube imágenes a static/assets/ en el repo
    - Crea/actualiza archivos en el repo de GitHub
-4. GitHub Actions detecta el push → build Hugo → deploy a Pages
+4. GitHub Actions: fix paths → build Hugo → deploy a Pages
 5. Blog actualizado en ~1-2 minutos
+
+Backup del vault (independiente de publicación):
+  Ctrl+Shift+S → Git "Commit and sync" → repo privado del vault
 ```
 
 ---
@@ -89,16 +92,20 @@ GitHub Pages
 ### Etapa 3 — Configuración de Enveloppe
 - [x] 1. Instalar plugin Enveloppe en Obsidian
 - [x] 2. Generar GitHub Personal Access Token (scope: `repo`)
-- [x] 3. Configurar Enveloppe (GitHub, upload path `content/posts/`, attachment path `static/images/`, wikilinks)
-- [ ] 4. Configurar regla de imágenes
-- [ ] 5. Test end-to-end completo
+- [x] 3. Configurar Enveloppe (GitHub, upload path `content/posts/`, attachment path `static/assets/`, wikilinks)
+- [x] 4. Configurar fix de paths en GitHub Actions (Enveloppe genera paths relativos con `static/`, el step los corrige antes del build)
+- [x] 5. Test end-to-end completo — imagen visible en el blog
+- Backup de config exportada en `.agents/config/enveloppe.json`
 
 ### Etapa 4 — Obsidian Git + automatización
-- [ ] 1. Instalar plugin Obsidian Git
-- [ ] 2. Configurar auto-commit/push
-- [ ] 3. Decidir estrategia de automatización
+- [x] 1. Instalar plugin Git (Vinzent03, id: obsidian-git)
+- [x] 2. Configurar: auto intervals en 0 (manual), push on commit and sync ON, pull on startup ON
+- [x] 3. Estrategia: hotkeys separados — vault backup (`Ctrl+Shift+S`) + publicación (`Ctrl+Shift+P`)
+  - Obsidian Git no tiene hook nativo post-push para disparar otros plugins
+  - Los hotkeys son independientes: se puede hacer backup sin publicar y viceversa
+  - Vault privado repo configurado con remote
 - [ ] 4. Crear template Templater para nuevos posts
-- [ ] 5. Documentar workflow en `WORKFLOW.md`
+- [ ] 5. Documentar workflow en nota del vault (`Proyectos/blog/WORKFLOW.md`)
 
 ### Etapa 5 — Pulido y features opcionales
 - [ ] 5a. Tipografía y paleta
