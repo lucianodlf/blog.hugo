@@ -87,7 +87,7 @@ Backup del vault (independiente de publicación):
 - [x] 1. Crear `.github/workflows/deploy.yml`
 - [x] 2. Configurar GitHub Pages → Source: "GitHub Actions"
 - [x] 3. Verificar workflow en verde
-- [x] 4. Confirmar URL pública → https://lucianodlf.github.io/blog.hugo/
+- [x] 4. Confirmar URL pública → https://lucianodlf.github.io/blog.lucianodlf/
 
 ### Etapa 3 — Configuración de Enveloppe
 - [x] 1. Instalar plugin Enveloppe en Obsidian
