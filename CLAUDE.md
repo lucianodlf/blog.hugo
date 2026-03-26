@@ -131,6 +131,17 @@ tags: []
 Todos los overrides van en `layouts/` y `static/css/custom.css`.
 Hugo prioriza `layouts/` sobre `themes/risotto/layouts/` automáticamente.
 
+## Workflow de trabajo
+Directorio: `.agents/working-progress` (sobreescribible con `WORKFLOW_DIR` en `.env`)
+Sesiones: `init` · `feat-[nombre]` · `feat-[nombre]-[issue]` · `fix-[nombre]` · `refactor-[nombre]`
+Archivos por sesión: `prompt.md` · `research.md` · `plan.md` · `fase-N-plan.md` · `roadmap.md`
+Nueva sesión: `/ns` — crea subdirectorio y `prompt.md`
+Al retomar: leer `prompt.md` y `plan.md` de la sesión activa
+TODOs: editar directamente el archivo de plan marcando `[x]`
+No incluir credenciales ni datos sensibles en documentos de trabajo
+Guía completa: `.agents/working-progress/WORKFLOW.md` (leer solo si hay dudas sobre el proceso)
+Al iniciar sesión nueva (sin contexto de trabajo activo): sugerir al usuario ejecutar `/ns` para crear la sesión.
+
 ## Pendientes conocidos
 - SEO: og:image, favicon (Etapa 5c)
 - Comentarios Giscus (Etapa 5d, opcional)
